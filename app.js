@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function splitText(text){
         const words = text.trim().split(' ').filter(item => item !== '');
         const modifiedWords = words.map((item, index, array) => {
-            if(item.length <= 3 && array[array.length - 1] !== item){
+            if(item.length <= 3 && (array.length - 1) !== index){
                 item += "&nbsp;";
             } else{
                 item += " ";
