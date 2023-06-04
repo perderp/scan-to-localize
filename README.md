@@ -46,4 +46,4 @@ scan-to-localize is released under the [MIT License](LICENSE).
 
 ## Contact
 
-For any questions or inquiries, please contact the project maintainer at your-email@example.com.
+For any questions or inquiries, please contact the project maintainer at chironjasphercainap@gmail.com.
