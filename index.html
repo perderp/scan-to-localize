@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./public/css/index.css">
+    <link rel="stylesheet" href="./public/css/page/index.css">
+    <title>ORPHAN WORDS</title>
 </head>
 <body>
-    <textarea name="" id="text-area" cols="100" rows="10"></textarea>
-
-    <div class="container">
-        <div class="output_head"></div>
-        <div id="output"> </div>
-    </div>
-
-    <script src="app.js"></script>
+    <section class="local">
+        <div class="l-wrap">
+            <div class="local__inner l-container u-d-f">
+                <div class="l-container__left local__left">
+                    <div class="local__title">
+                        <h3>INPUT TEXT HERE TO LOCALIZE : </h3>
+                    </div>
+                    <div class="local__input">
+                        <textarea name="" id="text-area"></textarea>
+                    </div>
+                </div>
+                <div class="l-container__right local__right">
+                    <div class="local__result">
+                        <div class="output__title">
+                            <h3>RESULT : </h3>
+                        </div>
+                        <div id="output"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./public/js/compiled.js"></script>
 </body>
 </html>
 
