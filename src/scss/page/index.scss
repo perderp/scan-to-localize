@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import "../foundation/**/*";
+
+
+.local{
+    &__inner{
+
+    }
+    &__title, &__result{
+
+    }
+
+    &__result{
+        &--top{
+            display:flex;
+            justify-content: space-between;
+            padding: 0 0 10px 0;
+        }
+    }
+
+    .copyText{
+        background:#F2BE22;
+        &:hover{
+            transition: .2s;
+            background: #F29727;
+        }
+    }
+
+    .clearText{
+        background: #98EECC;
+        &:hover{
+            transition: .2s;
+            background: #79E0EE;
+        }
+    }
+    
+
+    &__input{
+        textarea{
+            width: 90%;
+            height: 120px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            resize: none;
+        }
+    }
+}
+
+.notification{
+    &__container{
+        position: fixed;
+        bottom:0;
+        right:0;
+    }
+
+
+    &__msg{
+        @include font-sl(14);
+        display:flex;
+        flex-wrap: wrap;
+
+        padding:5px;
+        margin:0 5px 5px 0;
+        min-width:200px;
+
+        justify-content: center;
+        background: #90ee90;
+    }
+}

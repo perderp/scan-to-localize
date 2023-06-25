@@ -1,0 +1,14 @@
+@mixin font-sl($size, $line: null){
+    $rem : calc( $size/ $font-size-base);
+    font-size: #{$rem}rem;
+    @if( $line != null) {
+        line-height: calc($line/ $size);
+    }
+}
+
+@mixin flex-xy ($justify, $align, $direction: row ) {
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

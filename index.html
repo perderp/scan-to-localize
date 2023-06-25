@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/index.css">
     <link rel="stylesheet" href="./public/css/page/index.css">
+    <link rel="icon" type="image/x-icon" href="./fav.ico">
     <title>ORPHAN WORDS</title>
 </head>
 <body>
@@ -22,14 +23,24 @@
                 </div>
                 <div class="l-container__right local__right">
                     <div class="local__result">
-                        <div class="output__title">
-                            <h3>RESULT : </h3>
+                        <div class="local__result--top">
+                            <div class="output__title">
+                                <h3>RESULT : </h3>
+                            </div>
+                            <div class="local__btnGroup">
+                                <button class="c-button clearText" id="btnClear">Clear</button>
+                                <button class="c-button copyText" id="btnCopy">Copy text</button>
+                            </div>
                         </div>
                         <div id="output"></div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="notification__container">
+        
     </section>
     <script src="./public/js/compiled.js"></script>
 </body>
