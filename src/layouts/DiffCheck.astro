@@ -1,0 +1,28 @@
+---
+import Button from "@/components/Button.astro";
+import TextArea from "@/components/TextArea.astro";
+---
+<div class="container mx-auto py-10">
+    <TextArea text_area_id="textCheck01"/>
+    <TextArea text_area_id="textCheck02"/>
+    <Button label="FIND DIFFERENCE" btn_id ="btnCheck"/>
+</div>
+
+
+
+<script defer type="module" >
+    import { getDiff } from "./src/utils/diff.js"
+document.addEventListener("DOMContentLoaded", () => {
+
+    const textCheck01 = document.getElementById('textCheck01')
+    const textCheck02 = document.getElementById('textCheck02')
+    const btnCheck  = document.getElementById('btnCheck')
+
+    btnCheck.addEventListener('click', () => {
+      let result = getDiff(textCheck01.value, textCheck02.value);
+      document.getElementById('diff-result').innerHTML = result;
+    });
+
+});
+    
+</script>

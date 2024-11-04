@@ -1,0 +1,20 @@
+---
+interface Props {
+  titles: string[];
+}
+
+const { titles = [] } = Astro.props;
+---
+
+<div class="navigation">
+  <ul class="navigation__ul">
+    {titles.map((title) => {
+      const link = title === 'index' ? '/' : `/${title}`;
+      return (
+        <li class="navigation__li">
+          <a href={link}>{title === 'index' ? 'Home' : title}</a>
+        </li>
+      );
+    })}
+  </ul>
+</div>

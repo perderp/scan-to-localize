@@ -1,0 +1,56 @@
+---
+import TextArea from "@/components/TextArea.astro";
+import Button from "@/components/Button.astro";
+
+
+---
+
+<div class="container mx-auto py-10">
+    <TextArea text_area_id="textCase-area-id"/>
+    <Button label="Sentence case" btn_id="btn_sentence" />
+    <Button label="lower case" btn_id="btn_lower" />
+    <Button label="UPPER CASE" btn_id="btn_upper" />
+    <Button label="Capitalized Case" btn_id="btn_capitalized"/>
+</div>
+
+
+
+<script defer type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        const textCase_id = document.getElementById('textCase-area-id');
+        const btn_lower = document.getElementById('btn_lower');
+        const btn_upper = document.getElementById('btn_upper');
+        const btn_capitalized = document.getElementById('btn_capitalized');
+
+
+        btn_lower.addEventListener('click', () =>{
+            let modifiedTxt = textCase_id.value.toLowerCase()
+            textCase_id.value = modifiedTxt
+        })
+
+        btn_upper.addEventListener('click', () =>{
+            let modifiedTxt = textCase_id.value.toUpperCase()
+            textCase_id.value = modifiedTxt
+        })
+
+        btn_sentence.addEventListener('click', () => {
+            let value = textCase_id.value
+            let result = value[0].toUpperCase() + value.slice(1).toLowerCase()
+            textCase_id.value = result
+        })
+
+        btn_capitalized.addEventListener('click', () => {
+            let value = textCase_id.value.split(' ')
+
+            let result = value.map(x => {
+                if (x.length > 0){
+                    return x[0].toUpperCase() + x.slice(1).toLowerCase()
+                }
+                return x
+            })
+            textCase_id.value = result.join(' ');
+
+        })
+
+    });
+</script>

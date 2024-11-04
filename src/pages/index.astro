@@ -1,0 +1,30 @@
+---
+import "@/styles/global.scss"
+import Navigation from "@/components/Navigation.astro";
+import OrphanWords from "@/layouts/OrphanWords.astro";
+import TextCase from "@/layouts/TextCase.astro";
+import DiffCheck from "@/layouts/DiffCheck.astro";
+
+
+
+const pageTitle = ['index', 'about', 'blog']
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <Navigation titles={pageTitle} /> -->
+    <h1>ambot?</h1>
+
+    <OrphanWords />
+    <TextCase />
+    <!-- <DiffCheck /> -->
+
+
+</body>
+</html>
